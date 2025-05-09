@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('positives', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->foreignId('product_id')->contrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }
