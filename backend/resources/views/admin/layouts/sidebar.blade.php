@@ -52,9 +52,11 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
             <li>
-                <form id="adminLogout" action="#" method="post">
+                <form id="adminLogout" action="{{ route('admin.logout') }}" method="post">
+                    @csrf
                 </form>
                 <a class="dropdown-item" href="#"
+                    onclick="document.getElementById('adminLogout').submit();"
                 >Sign out</a>
             </li>
         </ul>
